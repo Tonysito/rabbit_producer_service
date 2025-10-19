@@ -1,46 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.10</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>org.cibertec</groupId>
-	<artifactId>rabbit_producer_service_admin</artifactId>
-	<version>1.0.0</version>
-	<name>rabbit_producer_service_admin</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<developers>
-		<developer/>
-	</developers>
-<scm>
-    <connection>scm:git:https://github.com/Tonysito/rabbit_producer_service_admin.git</connection>
-    <developerConnection>scm:git:https://github.com/Tonysito/rabbit_producer_service_admin.git</developerConnection>
-    <url>https://github.com/Tonysito/rabbit_producer_service_admin</url>
-    <tag>1.0.6</tag>
-</scm>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.10</version>
+        <relativePath/>
+    </parent>
 
-<properties>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-</properties>
+    <groupId>org.cibertec</groupId>
+    <artifactId>rabbit_producer_service_admin</artifactId>
+    <version>1.0.6</version>
+    <name>rabbit_producer_service_admin</name>
 
-	
-		
-			<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-	
-	
-	<dependencies>
+    <scm>
+        <connection>scm:git:https://github.com/Tonysito/rabbit_producer_service_admin.git</connection>
+        <developerConnection>scm:git:https://github.com/Tonysito/rabbit_producer_service_admin.git</developerConnection>
+        <url>https://github.com/Tonysito/rabbit_producer_service_admin</url>
+        <tag>1.0.6</tag>
+    </scm>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+   <dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -76,31 +71,27 @@
 		</dependency>
 		
 	</dependencies>
-	
-	
-	
-		<build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.3.0</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <mainClass>org.cibertec.service.MessageProducerService</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-		
 
-
+    <build>
+        <plugins>
+            <!-- Genera un JAR normal con tus clases -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- Spring Boot plugin solo para ejecutar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
