@@ -1,28 +1,17 @@
 # Maven
 target/
 
-# Eclipse
+# IDEs
 .classpath
 .project
 .settings/
-
-# IntelliJ IDEA
 *.iml
 .idea/
 
-# Compiled class files
+# Compiled files
 *.class
 
-# Logs
-*.log
-
-# BlueJ files
-*.ctxt
-
-# J2ME / Mobile Tools
-.mtj.tmp/
-
-# Package Files
+# Package files
 *.jar
 *.war
 *.nar
@@ -31,6 +20,9 @@ target/
 *.tar.gz
 *.rar
 
-# Virtual machine crash logs
+# Logs
+*.log
+
+# JVM crash logs
 hs_err_pid*
 replay_pid*
